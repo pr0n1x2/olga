@@ -42,6 +42,12 @@ body {
 .btn-black {
     background: #292929;
     border-color: #292929;
+    transition: .5s linear;
+}
+
+.btn-black:hover {
+    background: #EF3851;
+    border-color: #EF3851;
 }
 
 .btn-red {
@@ -51,6 +57,12 @@ body {
 
 .btn-transparent {
     border-color: #ffffff;
+    transition: .5s linear;
+}
+
+.btn-transparent:hover {
+    background: #ffffff;
+    color:#333333;
 }
 
 .btn-width-xl {
