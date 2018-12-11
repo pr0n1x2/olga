@@ -749,6 +749,23 @@ h2:after {
         height: 33.85rem;
         width: 85.2rem;
     }
+
+    .contact-form {
+        right: 15.5rem;
+        width: 35rem;
+    }
+
+    .contact-form p {
+        font-size: 2.6rem;
+    }
+
+    .contact-form .form-label {
+        width: 20.7rem;
+    }
+
+    .form-control {
+        font-size: 2rem;
+    }
 }
 
 /* Animations */
