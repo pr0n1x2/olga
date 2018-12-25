@@ -29,28 +29,28 @@
       height: 100%;
     }
 
-    p {
-      @include position-absolute(18.7rem);
+    h1 {
+      @include position-absolute(8.4em);
       width: 100%;
       text-align: center;
       font-weight: bold;
-      font-size: 3.5rem;
+      font-size: 1.9rem;
       color: #ffffff;
 
       @media screen and (max-width:$tablet-width) {
-        @include greeting-mobile-captions();
+        font-size: 3.5rem;
+        top: 5.0em;
       }
     }
 
-    h1 {
-      @extend p;
-      font-size: 1.9rem;
-      top: 8.4em;
+    p {
+      @extend h1;
+      font-size: 3.5rem;
+      top: 18.7rem;
 
       @media screen and (max-width:$tablet-width) {
-        @include greeting-mobile-captions();
-        font-size: 3.5rem;
-        top: 5.0em;
+        font-size: 5.9rem;
+        top: 22rem;
       }
     }
 
@@ -68,9 +68,7 @@
       @include position-absolute(27rem, 41.7rem);
       background: #292929;
       border-color: #292929;
-      transition-property: background, border-color;
-      transition-duration: 0.5s;
-      transition-timing-function: linear;
+      @include transition((background, border-color), 0.5s, linear);
       padding-right: 2.8rem;
 
       &:hover {
@@ -142,71 +140,115 @@
   }
 }
 
-/* Second block */
-.second {
+.module2 {
   display: flex;
   height: 21rem;
   width: 100%;
-}
 
-.second div {
-  flex-grow: 1;
-  background-size: cover;
-  position: relative;
-}
+  @media screen and (max-width:$tablet-width) {
+    flex-direction: column;
+    height: 65rem;
+  }
 
-.second > div:before {
-  display: block;
-  content: '';
-  background: rgba(41, 41, 41, 0.8);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+  > div:before {
+    @include position-absolute(0, 0);
+    display: block;
+    content: '';
+    background: rgba(41, 41, 41, 0.8);
+    width: 100%;
+    height: 100%;
+  }
 
-.second-left {
-  background: url(../img/left.jpg) no-repeat;
-}
+  div {
+    flex-grow: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 
-.second-right {
-  background: url(../img/right.jpg) no-repeat;
-}
+    div {
+      @include position-absolute(3rem);
+      width: 20rem;
 
-.second div div {
-  width: 20rem;
-  position: absolute;
-  top: 3rem;
-}
+      @media screen and (max-width:$tablet-width) {
+        @include position-absolute(0.6rem, 0, 0);
+        border: 1px solid #c7c7c7;
+        width: 65rem;
+        margin: 1rem auto 0;
+        padding: 1.5rem 0 3.5rem 0;
+      }
 
-.second-left div {
-  right: 8.3rem;
-}
+      p {
+        text-align: center;
+        padding: 0 0 2.5rem;
 
-.second-right div {
-  left: 8.3rem;
-}
+        &:nth-child(1) {
+          font-size: 1.2rem;
 
-.second div div  p {
-  text-align: center;
-  padding: 0 0 2.5rem;
-}
+          @media screen and (max-width:$tablet-width) {
+            font-size: 3.0rem;
+            line-height: 3.5rem;
+          }
+        }
 
-.second div div p:nth-child(1) {
-  font-size: 1.2rem;
-}
+        &:nth-child(2) {
+          font-size: 1.4rem;
+          color: $main-color;
 
-.second div div p:nth-child(2) {
-  font-size: 1.4rem;
-}
+          @media screen and (max-width:$tablet-width) {
+            font-size: 3.4rem;
+          }
+        }
 
-.second div div p:last-child {
-  padding: 1rem 0 0;
-}
+        &:last-child {
+          padding: 1rem 0 0;
+        }
 
-.smaller {
-  font-size: .9rem;
+        .smaller {
+          font-size: .9rem;
+
+          @media screen and (max-width:$tablet-width) {
+            font-size: 2.1rem;
+          }
+        }
+
+        a {
+          border-color: #ffffff;
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+          @include transition((background, color), 0.5s, linear);
+
+          &:hover {
+            background: #ffffff;
+            color:#333333;
+          }
+        }
+      }
+    }
+  }
+
+  .left {
+    background-image: url($path-to-img + 'left.jpg');
+
+    div {
+      right: 8.3rem;
+
+      @media screen and (max-width:$tablet-width) {
+        right: 0;
+      }
+    }
+  }
+
+  .right {
+    background-image: url($path-to-img + 'right.jpg');
+
+    div {
+      left: 8.3rem;
+
+      @media screen and (max-width:$tablet-width) {
+        left: 0;
+      }
+    }
+  }
 }
 
 /* Third, fifth and seventh block */
@@ -492,37 +534,6 @@
 
   .more:after {
     top: 1.1rem;
-  }
-
-  .second {
-    display: flex;
-    flex-direction: column;
-    height: 65rem;
-    width: 100%;
-  }
-
-  .second div div {
-    border:1px solid #C7C7C7;
-    position: absolute;
-    width: 65rem;
-    margin: 1rem auto 0;
-    padding: 1.5rem 0 3.5rem 0;
-    top:.6rem;
-    left: 0;
-    right: 0;
-  }
-
-  .second div div p:nth-child(1) {
-    font-size: 3.0rem;
-    line-height: 3.5rem;
-  }
-
-  .second div div p:nth-child(2) {
-    font-size: 3.4rem;
-  }
-
-  .smaller {
-    font-size: 2.1rem;
   }
 
   .third, .fifth, .seventh {

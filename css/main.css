@@ -123,7 +123,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-h1 {
+h1, .module1 .greeting p {
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -440,21 +440,6 @@ body {
   border-color: #EF3851;
 }
 
-.btn-transparent {
-  border-color: #ffffff;
-  transition: 0.5s linear;
-}
-
-.btn-transparent:hover {
-  background: #ffffff;
-  color: #333333;
-}
-
-.btn-width-xl {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .red {
   color: #EF3851;
 }
@@ -471,11 +456,11 @@ body {
   text-transform: uppercase;
 }
 
-.bold {
+.font-bold {
   font-weight: bold;
 }
 
-h1, h2, h3, p, .module1 .greeting h1 {
+h1, .module1 .greeting p, h2, h3, p {
   margin: 0;
   padding: 0;
 }
@@ -568,31 +553,29 @@ h2:after {
   width: 100%;
   height: 100%;
 }
-.module1 .greeting p, .module1 .greeting h1 {
+.module1 .greeting h1, .module1 .greeting p {
   position: absolute;
-  top: 18.7rem;
+  top: 8.4em;
   width: 100%;
   text-align: center;
   font-weight: bold;
-  font-size: 3.5rem;
+  font-size: 1.9rem;
   color: #ffffff;
 }
 @media screen and (max-width: 768px) {
-  .module1 .greeting p, .module1 .greeting h1 {
-    font-size: 5.9rem;
-    top: 22rem;
-  }
-}
-.module1 .greeting h1 {
-  font-size: 1.9rem;
-  top: 8.4em;
-}
-@media screen and (max-width: 768px) {
-  .module1 .greeting h1 {
-    font-size: 5.9rem;
-    top: 22rem;
+  .module1 .greeting h1, .module1 .greeting p {
     font-size: 3.5rem;
     top: 5em;
+  }
+}
+.module1 .greeting p {
+  font-size: 3.5rem;
+  top: 18.7rem;
+}
+@media screen and (max-width: 768px) {
+  .module1 .greeting p {
+    font-size: 5.9rem;
+    top: 22rem;
   }
 }
 .module1 .greeting img {
@@ -687,71 +670,116 @@ h2:after {
   }
 }
 
-/* Second block */
-.second {
+.module2 {
   display: flex;
   height: 21rem;
   width: 100%;
 }
-
-.second div {
-  flex-grow: 1;
-  background-size: cover;
-  position: relative;
+@media screen and (max-width: 768px) {
+  .module2 {
+    flex-direction: column;
+    height: 65rem;
+  }
 }
-
-.second > div:before {
-  display: block;
-  content: "";
-  background: rgba(41, 41, 41, 0.8);
+.module2 > div:before {
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
+  content: "";
+  background: rgba(41, 41, 41, 0.8);
   width: 100%;
   height: 100%;
 }
-
-.second-left {
-  background: url(../img/left.jpg) no-repeat;
+.module2 div {
+  flex-grow: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
-
-.second-right {
-  background: url(../img/right.jpg) no-repeat;
-}
-
-.second div div {
-  width: 20rem;
+.module2 div div {
   position: absolute;
   top: 3rem;
+  width: 20rem;
 }
-
-.second-left div {
-  right: 8.3rem;
+@media screen and (max-width: 768px) {
+  .module2 div div {
+    position: absolute;
+    top: 0.6rem;
+    left: 0;
+    right: 0;
+    border: 1px solid #c7c7c7;
+    width: 65rem;
+    margin: 1rem auto 0;
+    padding: 1.5rem 0 3.5rem 0;
+  }
 }
-
-.second-right div {
-  left: 8.3rem;
-}
-
-.second div div p, .second div div .module1 .greeting h1, .module1 .greeting .second div div h1 {
+.module2 div div p {
   text-align: center;
   padding: 0 0 2.5rem;
 }
-
-.second div div p:nth-child(1), .second div div .module1 .greeting h1:nth-child(1), .module1 .greeting .second div div h1:nth-child(1) {
+.module2 div div p:nth-child(1) {
   font-size: 1.2rem;
 }
-
-.second div div p:nth-child(2), .second div div .module1 .greeting h1:nth-child(2), .module1 .greeting .second div div h1:nth-child(2) {
-  font-size: 1.4rem;
+@media screen and (max-width: 768px) {
+  .module2 div div p:nth-child(1) {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
 }
-
-.second div div p:last-child, .second div div .module1 .greeting h1:last-child, .module1 .greeting .second div div h1:last-child {
+.module2 div div p:nth-child(2) {
+  font-size: 1.4rem;
+  color: #ef3851;
+}
+@media screen and (max-width: 768px) {
+  .module2 div div p:nth-child(2) {
+    font-size: 3.4rem;
+  }
+}
+.module2 div div p:last-child {
   padding: 1rem 0 0;
 }
-
-.smaller {
+.module2 div div p .smaller {
   font-size: 0.9rem;
+}
+@media screen and (max-width: 768px) {
+  .module2 div div p .smaller {
+    font-size: 2.1rem;
+  }
+}
+.module2 div div p a {
+  border-color: #ffffff;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  transition-property: background, color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+.module2 div div p a:hover {
+  background: #ffffff;
+  color: #333333;
+}
+.module2 .left {
+  background-image: url("../img/left.jpg");
+}
+.module2 .left div {
+  right: 8.3rem;
+}
+@media screen and (max-width: 768px) {
+  .module2 .left div {
+    right: 0;
+  }
+}
+.module2 .right {
+  background-image: url("../img/right.jpg");
+}
+.module2 .right div {
+  left: 8.3rem;
+}
+@media screen and (max-width: 768px) {
+  .module2 .right div {
+    left: 0;
+  }
 }
 
 /* Third, fifth and seventh block */
@@ -793,7 +821,7 @@ h2:after {
   background-image: url(../img/6I0A7957.jpg);
 }
 
-.third p, .third .module1 .greeting h1, .module1 .greeting .third h1, .fifth p, .fifth .module1 .greeting h1, .module1 .greeting .fifth h1, .seventh p, .seventh .module1 .greeting h1, .module1 .greeting .seventh h1 {
+.third p, .fifth p, .seventh p {
   flex-grow: 1;
   text-align: center;
   font-size: 1.5rem;
@@ -812,7 +840,7 @@ h2:after {
   margin-top: 4rem;
 }
 
-.fourth > .info-container > p, .module1 .greeting .fourth > .info-container > h1 {
+.fourth > .info-container > p {
   padding: 0 19rem 0 2.3rem;
 }
 
@@ -851,7 +879,7 @@ h2:after {
   font-size: 1.4rem;
 }
 
-.testimonials-content p.text, .testimonials-content .module1 .greeting h1.text, .module1 .greeting .testimonials-content h1.text {
+.testimonials-content p.text {
   margin-top: 0.4rem;
 }
 
@@ -913,7 +941,7 @@ h2:after {
   width: 28rem;
 }
 
-.contact-form p, .contact-form .module1 .greeting h1, .module1 .greeting .contact-form h1 {
+.contact-form p {
   font-size: 1.8rem;
   margin-bottom: 2rem;
 }
@@ -1039,42 +1067,11 @@ h2:after {
     top: 1.1rem;
   }
 
-  .second {
-    display: flex;
-    flex-direction: column;
-    height: 65rem;
-    width: 100%;
-  }
-
-  .second div div {
-    border: 1px solid #C7C7C7;
-    position: absolute;
-    width: 65rem;
-    margin: 1rem auto 0;
-    padding: 1.5rem 0 3.5rem 0;
-    top: 0.6rem;
-    left: 0;
-    right: 0;
-  }
-
-  .second div div p:nth-child(1), .second div div .module1 .greeting h1:nth-child(1), .module1 .greeting .second div div h1:nth-child(1) {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
-
-  .second div div p:nth-child(2), .second div div .module1 .greeting h1:nth-child(2), .module1 .greeting .second div div h1:nth-child(2) {
-    font-size: 3.4rem;
-  }
-
-  .smaller {
-    font-size: 2.1rem;
-  }
-
   .third, .fifth, .seventh {
     height: 32rem;
   }
 
-  .third p, .third .module1 .greeting h1, .module1 .greeting .third h1, .fifth p, .fifth .module1 .greeting h1, .module1 .greeting .fifth h1, .seventh p, .seventh .module1 .greeting h1, .module1 .greeting .seventh h1 {
+  .third p, .fifth p, .seventh p {
     font-size: 3.5rem;
   }
 
@@ -1086,7 +1083,7 @@ h2:after {
     width: 90rem;
   }
 
-  .fourth > .info-container > p, .module1 .greeting .fourth > .info-container > h1 {
+  .fourth > .info-container > p {
     padding: 0 41rem 0 0rem;
   }
 
@@ -1114,7 +1111,7 @@ h2:after {
     height: 32rem;
   }
 
-  .testimonials-content p, .testimonials-content .module1 .greeting h1, .module1 .greeting .testimonials-content h1 {
+  .testimonials-content p {
     font-size: 1.9rem;
     line-height: 2.4rem;
   }
@@ -1161,7 +1158,7 @@ h2:after {
     width: 35rem;
   }
 
-  .contact-form p, .contact-form .module1 .greeting h1, .module1 .greeting .contact-form h1 {
+  .contact-form p {
     font-size: 2.6rem;
   }
 

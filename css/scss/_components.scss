@@ -31,21 +31,6 @@ body {
   border-color: #EF3851;
 }
 
-.btn-transparent {
-  border-color: #ffffff;
-  transition: .5s linear;
-}
-
-.btn-transparent:hover {
-  background: #ffffff;
-  color:#333333;
-}
-
-.btn-width-xl {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .red {
   color: #EF3851;
 }
@@ -62,7 +47,7 @@ body {
   text-transform: uppercase;
 }
 
-.bold {
+.font-bold {
   font-weight: bold;
 }
 

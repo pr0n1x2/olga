@@ -1,8 +1,3 @@
-@mixin greeting-mobile-captions() {
-  font-size: 5.9rem;
-  top: 22rem;
-}
-
 @mixin position-absolute($top, $left: null, $right: null, $bottom: null) {
   position: absolute;
 
@@ -21,4 +16,10 @@
   @if($bottom) {
     bottom: $bottom;
   }
+}
+
+@mixin transition($elements, $time, $function) {
+  transition-property: $elements;
+  transition-duration: $time;
+  transition-timing-function: $function;
 }
