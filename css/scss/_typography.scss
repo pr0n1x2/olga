@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Google Sans';
+  src: url($path-to-fonts + 'GoogleSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url($path-to-fonts + 'GoogleSans-Bold.ttf');
+  font-weight: bold;
+}
