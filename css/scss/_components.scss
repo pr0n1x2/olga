@@ -26,6 +26,14 @@ body {
   cursor: pointer;
 }
 
+.white-font-color {
+  color: $main-color2;
+}
+
+.black-font-color {
+  color: #333333;
+}
+
 .btn-red {
   background: #EF3851;
   border-color: #EF3851;
@@ -40,7 +48,7 @@ body {
 }
 
 .black {
-  color: #333333;
+
 }
 
 .upper {

@@ -35,7 +35,7 @@
       text-align: center;
       font-weight: bold;
       font-size: 1.9rem;
-      color: #ffffff;
+      color: $main-color2;
 
       @media screen and (max-width:$tablet-width) {
         font-size: 3.5rem;
@@ -119,7 +119,7 @@
           }
 
           a {
-            color: #ffffff;
+            color: $main-color2;
             text-transform: uppercase;
             margin-left: 2.2rem;
             font-size: 0.9rem;
@@ -212,13 +212,13 @@
         }
 
         a {
-          border-color: #ffffff;
+          border-color: $main-color2;
           padding-left: 2.5rem;
           padding-right: 2.5rem;
           @include transition((background, color), 0.5s, linear);
 
           &:hover {
-            background: #ffffff;
+            background: $main-color2;
             color:#333333;
           }
         }
@@ -251,51 +251,61 @@
   }
 }
 
-/* Third, fifth and seventh block */
-.third, .fifth, .seventh {
+.module3 {
   width: 100%;
   display: flex;
   align-items: center;
   height: 22rem;
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
+  background: url($path-to-img + '6I0A7991.jpg') no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width:$tablet-width) {
+    height: 32rem;
+  }
+
+  &:before {
+    @include position-absolute(0, 0);
+    display: block;
+    content: '';
+    background: rgba(255, 255, 255, 0.57);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  p {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    z-index: 2;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @media screen and (max-width:$tablet-width) {
+      font-size: 3.5rem;
+    }
+  }
 }
 
-.third:before, .fifth:before, .seventh:before {
-  display: block;
-  content: '';
-  background: rgba(37, 37, 37, 0.57);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+.module5 {
+  @extend .module3;
+  background-image: url($path-to-img + '6I0A7981.jpg');
+
+  &:before {
+    background-color: $module-5-and-7-background;
+  }
 }
 
-.third:before {
-  background: rgba(255, 255, 255, 0.57);
+.module7 {
+  @extend .module3;
+  background-image: url($path-to-img + '6I0A7957.jpg');
+
+  &:before {
+    background-color: $module-5-and-7-background;
+  }
 }
 
-.third {
-  background-image: url(../img/6I0A7991.jpg);
-}
-
-.fifth {
-  background-image: url(../img/6I0A7981.jpg);
-}
-
-.seventh {
-  background-image: url(../img/6I0A7957.jpg);
-}
-
-.third p, .fifth p, .seventh p {
-  flex-grow: 1;
-  text-align: center;
-  font-size: 1.5rem;
-  z-index: 2;
-}
 
 /* Fourth block */
 .fourth {
@@ -534,14 +544,6 @@
 
   .more:after {
     top: 1.1rem;
-  }
-
-  .third, .fifth, .seventh {
-    height: 32rem;
-  }
-
-  .third p, .fifth p, .seventh p {
-    font-size: 3.5rem;
   }
 
   .fourth {
