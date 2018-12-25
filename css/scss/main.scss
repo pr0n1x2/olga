@@ -213,8 +213,6 @@
 
         a {
           border-color: $main-color2;
-          padding-left: 2.5rem;
-          padding-right: 2.5rem;
           @include transition((background, color), 0.5s, linear);
 
           &:hover {
@@ -306,6 +304,67 @@
   }
 }
 
+.module9 {
+  width: 100%;
+  height: 32rem;
+  background: url($path-to-img + 'zad.jpg') no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .contact-form {
+    @include position-absolute(3rem, null, 20.5rem);
+    width: 28rem;
+
+    @media screen and (max-width:$tablet-width) {
+      right: 15.5rem;
+      width: 35rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #fff;
+
+      @media screen and (max-width:$tablet-width) {
+        font-size: 2.6rem;
+      }
+    }
+
+    .form-label {
+      width: 14.7rem;
+      margin: 1rem 0;
+
+      @media screen and (max-width:$tablet-width) {
+        width: 20.7rem;
+      }
+    }
+  }
+
+  .form-control {
+    width: 100%;
+    border: .1rem solid #eeeeee;
+    padding: .3rem .7rem;
+    border-radius: .3rem;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+
+    @media screen and (max-width:$tablet-width) {
+      font-size: 2rem;
+    }
+  }
+
+  .form-sumbit {
+    margin-top: 2rem;
+
+    button {
+      background: $main-color;
+      border-color: $main-color;
+    }
+  }
+}
 
 /* Fourth block */
 .fourth {
@@ -401,45 +460,6 @@
   display: none;
   height: 20.8rem;
   width: 55.6rem;
-}
-
-/* Ninth block */
-.ninth {
-  width: 100%;
-  height: 32rem;
-  background: url(../img/zad.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.contact-form {
-  position: absolute;
-  top: 3rem;
-  right: 20.5rem;
-  width: 28rem;
-}
-
-.contact-form p {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-
-.contact-form .form-label {
-  width: 12.7rem;
-  margin: 1rem 0
-}
-
-.form-control {
-  width: 100%;
-  border: .1rem solid #eeeeee;
-  padding: .3rem .7rem;
-  border-radius: .3rem;
-  font-size: 1rem;
-}
-
-.form-sumbit {
-  margin-top: 2rem;
 }
 
 /* Slider */
@@ -622,22 +642,5 @@
     display: block;
     height: 33.85rem;
     width: 85.2rem;
-  }
-
-  .contact-form {
-    right: 15.5rem;
-    width: 35rem;
-  }
-
-  .contact-form p {
-    font-size: 2.6rem;
-  }
-
-  .contact-form .form-label {
-    width: 20.7rem;
-  }
-
-  .form-control {
-    font-size: 2rem;
   }
 }

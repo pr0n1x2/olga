@@ -435,17 +435,17 @@ body {
   cursor: pointer;
 }
 
+.btn-large {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .white-font-color {
   color: #fff;
 }
 
 .black-font-color {
   color: #333333;
-}
-
-.btn-red {
-  background: #EF3851;
-  border-color: #EF3851;
 }
 
 .red {
@@ -753,8 +753,6 @@ h2:after {
 }
 .module2 div div p a {
   border-color: #fff;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
   transition-property: background, color;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -837,6 +835,68 @@ h2:after {
 }
 .module7:before {
   background-color: rgba(37, 37, 37, 0.57);
+}
+
+.module9 {
+  width: 100%;
+  height: 32rem;
+  background: url("../img/zad.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.module9 .contact-form {
+  position: absolute;
+  top: 3rem;
+  right: 20.5rem;
+  width: 28rem;
+}
+@media screen and (max-width: 768px) {
+  .module9 .contact-form {
+    right: 15.5rem;
+    width: 35rem;
+  }
+}
+.module9 .contact-form p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .module9 .contact-form p {
+    font-size: 2.6rem;
+  }
+}
+.module9 .contact-form .form-label {
+  width: 14.7rem;
+  margin: 1rem 0;
+}
+@media screen and (max-width: 768px) {
+  .module9 .contact-form .form-label {
+    width: 20.7rem;
+  }
+}
+.module9 .form-control {
+  width: 100%;
+  border: 0.1rem solid #eeeeee;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .module9 .form-control {
+    font-size: 2rem;
+  }
+}
+.module9 .form-sumbit {
+  margin-top: 2rem;
+}
+.module9 .form-sumbit button {
+  background: #ef3851;
+  border-color: #ef3851;
 }
 
 /* Fourth block */
@@ -933,45 +993,6 @@ h2:after {
   display: none;
   height: 20.8rem;
   width: 55.6rem;
-}
-
-/* Ninth block */
-.ninth {
-  width: 100%;
-  height: 32rem;
-  background: url(../img/zad.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.contact-form {
-  position: absolute;
-  top: 3rem;
-  right: 20.5rem;
-  width: 28rem;
-}
-
-.contact-form p {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-
-.contact-form .form-label {
-  width: 12.7rem;
-  margin: 1rem 0;
-}
-
-.form-control {
-  width: 100%;
-  border: 0.1rem solid #eeeeee;
-  padding: 0.3rem 0.7rem;
-  border-radius: 0.3rem;
-  font-size: 1rem;
-}
-
-.form-sumbit {
-  margin-top: 2rem;
 }
 
 /* Slider */
@@ -1154,22 +1175,5 @@ h2:after {
     display: block;
     height: 33.85rem;
     width: 85.2rem;
-  }
-
-  .contact-form {
-    right: 15.5rem;
-    width: 35rem;
-  }
-
-  .contact-form p {
-    font-size: 2.6rem;
-  }
-
-  .contact-form .form-label {
-    width: 20.7rem;
-  }
-
-  .form-control {
-    font-size: 2rem;
   }
 }

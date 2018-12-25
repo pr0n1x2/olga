@@ -26,6 +26,11 @@ body {
   cursor: pointer;
 }
 
+.btn-large {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .white-font-color {
   color: $main-color2;
 }
@@ -34,10 +39,7 @@ body {
   color: #333333;
 }
 
-.btn-red {
-  background: #EF3851;
-  border-color: #EF3851;
-}
+
 
 .red {
   color: #EF3851;
