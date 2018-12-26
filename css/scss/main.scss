@@ -348,6 +348,59 @@
   }
 }
 
+.module6 {
+  height: 36rem;
+  position: relative;
+
+  @media screen and (max-width:$tablet-width) {
+    height: 70rem;
+  }
+
+  .testimonials-item {
+    padding:1.5rem;
+  }
+
+  .testimonials-content {
+    position: relative;
+    padding-left: 17rem;
+
+    @media screen and (max-width:$tablet-width) {
+      padding-left: 35rem;
+    }
+
+    img {
+      @include position-absolute(0, 0);
+      height: 15rem;
+
+      @media screen and (max-width:$tablet-width) {
+        height: 32rem;
+      }
+    }
+
+    h3 {
+      color: #333333;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-weight: bold;
+
+      @media screen and (max-width:$tablet-width) {
+        font-size: 2.8rem;
+      }
+    }
+
+    p {
+      @media screen and (max-width:$tablet-width) {
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    p.text {
+      margin-top: 0.4rem;
+    }
+  }
+}
+
 .module7 {
   @extend .module3;
   background-image: url($path-to-img + '6I0A7957.jpg');
@@ -419,37 +472,7 @@
   }
 }
 
-/* Sixth block */
-.sixth {
-  height: 36rem;
-  position: relative;
-}
 
-.testimonials-item {
-  padding:1.5rem;
-}
-
-.testimonials-content {
-  position: relative;
-  padding-left: 17rem;
-}
-
-.testimonials-content img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 15rem;
-}
-
-.testimonials-content h3 {
-  color: #333333;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-}
-
-.testimonials-content p.text {
-  margin-top: .4rem;
-}
 
 /* Eighth block */
 .eighth {
@@ -495,47 +518,8 @@
 
 
 @media only screen and (max-width:768px) {
-
-  .text {
-    font-size: 1.9rem;
-    line-height: 2.4rem;
-  }
-
-  .sixth {
-    height: 70rem;
-  }
-
-  .testimonials-content {
-    padding-left: 35rem;
-  }
-
-  .testimonials-content h3 {
-    font-size: 2.8rem;
-  }
-
-  .testimonials-content img {
-    height: 32rem;
-  }
-
-  .testimonials-content p {
-    font-size: 1.9rem;
-    line-height: 2.4rem;
-  }
-
   .eighth {
     height: 53rem;
-  }
-
-  .slider-content .to-left a:after, .slider-content .to-right a:after {
-
-  }
-
-  .slider-content .to-left a:after {
-
-  }
-
-  .slider-content .to-right a:after {
-
   }
 
   #videos-slider > .slider-content {
