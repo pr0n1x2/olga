@@ -23,3 +23,20 @@
   transition-duration: $time;
   transition-timing-function: $function;
 }
+
+@mixin display-block($width: null, $height: null) {
+  display: block;
+
+  @if($width) {
+    width: $width;
+  }
+
+  @if($height) {
+    height: $height;
+  }
+}
+
+@mixin flex-width-100 {
+  display: flex;
+  width: 100%;
+}
