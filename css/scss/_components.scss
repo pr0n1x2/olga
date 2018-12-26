@@ -24,6 +24,13 @@ body {
   font-size: .72rem;
   position: relative;
   cursor: pointer;
+
+  @media screen and (max-width:$tablet-width) {
+    border-width: .2rem;
+    border-radius: 6rem;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.72rem;
+  }
 }
 
 .btn-large {
@@ -39,6 +46,42 @@ body {
   color: #333333;
 }
 
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 1.7rem;
+
+  @media screen and (max-width:$tablet-width) {
+    font-size: 4.2rem;
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    background: $main-color;
+    border: 0.08rem solid $main-color;
+    width: 5.4rem;
+    margin-top: .5rem;
+
+    @media screen and (max-width:$tablet-width) {
+      width: 12.4rem;
+      border: .2rem solid #EF3A53;
+    }
+  }
+}
+
+.info-container {
+  width: 60rem;
+  height: 100%;
+  margin-top: 4rem;
+
+  @media screen and (max-width:$tablet-width) {
+    width: 90rem;
+  }
+}
+
+
 
 
 .red {
@@ -49,10 +92,6 @@ body {
   color: #ffffff;
 }
 
-.black {
-
-}
-
 .upper {
   text-transform: uppercase;
 }
@@ -61,51 +100,14 @@ body {
   font-weight: bold;
 }
 
-h1, h2, h3, p {
-  margin: 0;
-  padding: 0;
-}
 
-h2 {
-  font-size: 1.8rem;
-  color: #333333;
-  margin-bottom: 1.7rem;
-}
 
-h2:after {
-  display: block;
-  content: '';
-  background: #EF3A53;
-  border: .08rem solid #EF3A53;
-  width: 5.4rem;
-  margin-top: .5rem;
-}
+
 
 .text {
   font-size: 0.8rem;
   line-height: 1.3rem;
   color: #333333;
-}
-
-.more {
-  display: block;
-  color: #333333;
-  width: 6.5rem;
-  position: relative;
-  margin-top: .6rem;
-}
-
-.more:after {
-  display: block;
-  position: absolute;
-  content: '';
-  top: .4rem;
-  right: 0rem;
-  width: 1.6rem;
-  height: .5rem;
-  background-size: cover;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAKCAYAAABMtYURAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABvSURBVHgBzZNRDYAwDESvBAHghkwFGQgBBWABBTjAB2qGAVZK+CHLvi97SfvRn7tcW4BAcOP6VjqvQCAqLkCXnAEKofMmPmgxBiQ4v4OK9NYaqM6UnWeJomDyXb3FbvGDSXHCNSjYp98yteex/acPN2A3CC/FxL4AAAAASUVORK5CYII=');
-  background-repeat: no-repeat;
 }
 
 .main_color {

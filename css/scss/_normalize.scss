@@ -135,7 +135,11 @@ dfn {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
 }
 
 /**

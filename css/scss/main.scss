@@ -286,6 +286,58 @@
   }
 }
 
+.module4 {
+  height: 28rem;
+  position: relative;
+
+  @media screen and (max-width:$tablet-width) {
+    height: 68rem;
+  }
+
+  > .info-container > p {
+    padding: 0 19rem 0 2.3rem;
+
+    @media screen and (max-width:$tablet-width) {
+      padding: 0 41rem 0 0rem;
+    }
+
+    a {
+      display: block;
+      color: #333333;
+      width: 6.5rem;
+      position: relative;
+      margin-top: 0.6rem;
+
+      @media screen and (max-width:$tablet-width) {
+        width: 12.5rem;
+      }
+
+      &:after {
+        @include position-absolute(0.4rem, null, 0);
+        display: block;
+        content: '';
+        width: 1.6rem;
+        height: 0.5rem;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAKCAYAAABMtYURAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABvSURBVHgBzZNRDYAwDESvBAHghkwFGQgBBWABBTjAB2qGAVZK+CHLvi97SfvRn7tcW4BAcOP6VjqvQCAqLkCXnAEKofMmPmgxBiQ4v4OK9NYaqM6UnWeJomDyXb3FbvGDSXHCNSjYp98yteex/acPN2A3CC/FxL4AAAAASUVORK5CYII=') no-repeat;
+        background-size: cover;
+
+        @media screen and (max-width:$tablet-width) {
+          top: 1.1rem;
+        }
+      }
+    }
+  }
+
+  > .info-container > img {
+    @include position-absolute(null, null, 0, 0);
+    height: 23.9rem;
+
+    @media screen and (max-width:$tablet-width) {
+      height: 58.9rem;
+    }
+  }
+}
+
 .module5 {
   @extend .module3;
   background-image: url($path-to-img + '6I0A7981.jpg');
@@ -364,29 +416,6 @@
       border-color: $main-color;
     }
   }
-}
-
-/* Fourth block */
-.fourth {
-  height: 28rem;
-  position: relative;
-}
-
-.info-container {
-  width: 60rem;
-  height: 100%;
-  margin-top: 4rem;
-}
-
-.fourth > .info-container > p {
-  padding: 0 19rem 0 2.3rem;
-}
-
-.fourth > .info-container > img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 23.9rem;
 }
 
 /* Sixth block */
@@ -537,49 +566,10 @@
 }
 
 @media only screen and (max-width:768px) {
-  .btn {
-    border-width: .2rem;
-    border-radius: 6rem;
-    padding: 1.2rem 2.4rem;
-    font-size: 1.72rem;
-  }
-
-  h2 {
-    font-size: 4.2rem;
-  }
-
-  h2:after {
-    width: 12.4rem;
-    border: .2rem solid #EF3A53;
-  }
 
   .text {
     font-size: 1.9rem;
     line-height: 2.4rem;
-  }
-
-  .more {
-    width: 12.5rem;
-  }
-
-  .more:after {
-    top: 1.1rem;
-  }
-
-  .fourth {
-    height: 68rem;
-  }
-
-  .info-container {
-    width: 90rem;
-  }
-
-  .fourth > .info-container > p {
-    padding: 0 41rem 0 0rem;
-  }
-
-  .fourth > .info-container > img {
-    height: 58.9rem;
   }
 
   .sixth {
